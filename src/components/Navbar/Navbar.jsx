@@ -14,7 +14,7 @@ export default function Navbar() {
   function SignOut() {
     localStorage.removeItem("UserToken");
     setUserLogin(null);
-    Navigate("login");
+    Navigate("/ecommerce/login");
   }
 
   function resbonsive(e) {
@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="hidden md:flex flex-wrap justify-between items-center mx-auto max-w-screen-xl ">
           <div className="flex justify-center">
             <Link
-              to=""
+              to="/ecommerce"
               className="flex items-center space-x-3 me-2 rtl:space-x-reverse"
             >
               <img src={Logo} className="h-8" alt="FreshCart" />
@@ -41,16 +41,16 @@ export default function Navbar() {
             {/* <div className=""> */}
             {UserLogin != null ? (
               <div className=" inline-block">
-                <Link className="text-slate-600 p-4" to="">
+                <Link className="text-slate-600 p-4" to="/ecommerce">
                   Home
                 </Link>
-                <Link className="text-slate-600 p-4" to="products">
+                <Link className="text-slate-600 p-4" to="/ecommerce/products">
                   Products
                 </Link>
-                <Link className="text-slate-600 p-4" to="categories">
+                <Link className="text-slate-600 p-4" to="/ecommerce/categories">
                   Categories
                 </Link>
-                <Link className="text-slate-600 p-4" to="brands">
+                <Link className="text-slate-600 p-4" to="/ecommerce/brands">
                   Brands
                 </Link>
               </div>
@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className=" flex items-center space-x-6 p-2 rtl:space-x-reverse">
             {UserLogin != null ? (
               <>
-                <Link className="text-black relative border-r-2 p-4" to="cart">
+                <Link className="text-black relative border-r-2 p-4" to="/ecommerce/cart">
                   Cart
                   <i class="fa-solid ms-1  fa-cart-shopping"></i>
                   {cartnum == 0 ? null : (
@@ -69,7 +69,7 @@ export default function Navbar() {
                   )}
                 </Link>
                 <Link
-                  to={"wishlist"}
+                  to={"/ecommerce/wishlist"}
                   className="text-black relative border-r-2 p-4"
                 >
                   Wishlist
@@ -88,11 +88,11 @@ export default function Navbar() {
               </div>
             ) : (
               <>
-                <Link to="login" className="text-sm">
+                <Link to="/ecommerce/login" className="text-sm">
                   Login
                 </Link>
 
-                <Link to="register" className="text-sm">
+                <Link to="/ecommerce/register" className="text-sm">
                   Register
                 </Link>
               </>
@@ -104,7 +104,7 @@ export default function Navbar() {
           <div className=" flex justify-center">
             <Link
               onClick={() => resbonsive(false)}
-              to=""
+              to="/ecommerce"
               className="flex items-center space-x-3 me-2 rtl:space-x-reverse"
             >
               <img src={Logo} className="h-8" alt="FreshCart" />
@@ -120,27 +120,27 @@ export default function Navbar() {
           <div className="transition">
             {UserLogin != null ? (
               <div className=" flex flex-col">
-                <Link onClick={resbonsive} className="text-slate-600 p-4" to="">
+                <Link onClick={resbonsive} className="text-slate-600 p-4" to="/ecommerce">
                   Home
                 </Link>
                 <Link
                   onClick={resbonsive}
                   className="text-slate-600 p-4"
-                  to="products"
+                  to="/ecommerce/products"
                 >
                   Products
                 </Link>
                 <Link
                   onClick={resbonsive}
                   className="text-slate-600 p-4"
-                  to="categories"
+                  to="/ecommerce/categories"
                 >
                   Categories
                 </Link>
                 <Link
                   onClick={resbonsive}
                   className="text-slate-600 p-4"
-                  to="brands"
+                  to="/ecommerce/brands"
                 >
                   Brands
                 </Link>
@@ -153,7 +153,7 @@ export default function Navbar() {
                   <Link
                     onClick={resbonsive}
                     className="text-black relative border-r-2 p-6"
-                    to="cart"
+                    to="/ecommerce/cart"
                   >
                     Cart
                     <i class="fa-solid ms-2 fa-cart-shopping"></i>
@@ -164,7 +164,7 @@ export default function Navbar() {
                     )}
                   </Link>
                   <Link
-                    to={"wishlist"}
+                    to={"/ecommerce/wishlist"}
                     className="text-black relative border-r-2 p-4"
                   >
                     Wishlist
@@ -181,13 +181,13 @@ export default function Navbar() {
                 </>
               ) : (
                 <>
-                  <Link onClick={resbonsive} to="login" className="text-sm m-5">
+                  <Link onClick={resbonsive} to="/ecommerce/login" className="text-sm m-5">
                     Login
                   </Link>
 
                   <Link
                     onClick={resbonsive}
-                    to="register"
+                    to="/ecommerce/register"
                     className="text-sm m-5"
                   >
                     Register

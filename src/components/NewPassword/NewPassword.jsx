@@ -120,8 +120,8 @@ export default function NewPassword() {
         >
           {spiner == true ? <i className="fas fa-spinner fa-spin"></i>:"RestPassword"}
         </button>
-        <Link to={'/forgetpassword'}><span className="text-blue-500 underline">Forget password</span></Link>
-        <Link to={"/register"}><span className="text-blue-500 underline">Don't you have account ? Register Now</span></Link>
+        <Link to={'/ecommerce/forgetpassword'}><span className="text-blue-500 underline">Forget password</span></Link>
+        <Link to={"/ecommerce/register"}><span className="text-blue-500 underline">Don't you have account ? Register Now</span></Link>
         </div>
       </form>
     </>

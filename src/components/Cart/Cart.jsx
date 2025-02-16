@@ -71,7 +71,7 @@ export default function Cart() {
               <div className="border-b-2 md:flex md:justify-between">
                 <div className="md:flex md:justify-center justify-between  gap-4 p-3   md:w-[50%]">
                   <div className="md:w-[40%] w-full">
-                    <Link to={`/productdetails/${res.product.id}/${res.product.category.name}`}>
+                    <Link to={`/ecommerce/productdetails/${res.product.id}/${res.product.category.name}`}>
                     <img
                       src={res.product.imageCover}
                       className="md:w-full text-left w-[50%]"
@@ -132,7 +132,7 @@ export default function Cart() {
               </div>
             ))
           )}
-          <Link to={'/cheaktOut'}>
+          <Link to={'/ecommerce/cheaktOut'}>
           <button
             type="button "
             className="bg-emerald-600 text-white px-3 py-3 rounded-md m-5"

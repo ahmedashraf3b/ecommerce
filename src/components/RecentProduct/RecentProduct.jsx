@@ -52,7 +52,7 @@ export default function RecentProduct() {
             key={product.id}
             >
               <div className="p-3 mb-3">
-                <Link to={`productdetails/${product.id}/${product.category.name}`}>
+                <Link to={`/ecommerce/productdetails/${product.id}/${product.category.name}`}>
                   <img src={product.imageCover} className="w-full" alt="" />
                   <h3 className="text-emerald-700 text-left">
                     {product.category.name}

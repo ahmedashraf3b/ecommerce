@@ -20,7 +20,7 @@ export default function Categories() {
   }
   function Getspcategory(name) {
     return (
-        navigat(`/categories/${name}`)
+        navigat(`/ecommerce/categories/${name}`)
       )
   }
   

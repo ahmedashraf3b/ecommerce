@@ -46,7 +46,7 @@ export default function Wishlist() {
               <div className="border-b-2 md:flex md:justify-between">
                 <div className="md:flex md:justify-center justify-between  gap-4 p-3   md:w-[50%]">
                   <div className="md:w-[40%] w-full">
-                    <Link to={`/productdetails/${res.id}/${res.category.name}`}>
+                    <Link to={`/ecommerce/productdetails/${res.id}/${res.category.name}`}>
                     <img
                       src={res.imageCover}
                       className="md:w-full text-left w-[50%]"

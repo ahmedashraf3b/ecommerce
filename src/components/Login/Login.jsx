@@ -25,7 +25,7 @@ export default function Login() {
       if (res.data.message == 'success') {
         localStorage.setItem("UserToken",res.data.token)
         setUserLogin(res.data.token)
-        Navigat('/')
+        Navigat('/ecommerce')
       }
       
       }

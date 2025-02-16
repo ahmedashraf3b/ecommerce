@@ -52,7 +52,7 @@ export default function CategoriesProduct() {
                     >
                       <div className="p-3 mb-3">
                         <Link
-                          to={`/productdetails/${res.id}/${res.category?.name}`}
+                          to={`/ecommerce/productdetails/${res.id}/${res.category?.name}`}
                         >
                           <img src={res.imageCover} className="w-full" alt="" />
                           <h3 className="text-emerald-700 text-left">
