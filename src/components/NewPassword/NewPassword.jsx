@@ -22,7 +22,7 @@ export default function NewPassword() {
       // console.log(res);
         localStorage.setItem("UserToken",res.data.token)
         setUserLogin(res.data.token)
-        Navigat('/')
+        Navigat('/ecommerce')
       
       }
         )

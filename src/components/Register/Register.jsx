@@ -224,7 +224,7 @@ export default function Register() {
         >
           {spiner == true ? <i className="fas fa-spinner fa-spin"></i>:"Register"}
         </button>
-        <Link to={"/login"}><span className="text-blue-500 underline">Do you have account ? Login Now</span></Link>
+        <Link to={"/ecommerce/login"}><span className="text-blue-500 underline">Do you have account ? Login Now</span></Link>
         </div>
         
       </form>

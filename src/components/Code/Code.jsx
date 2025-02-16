@@ -22,7 +22,7 @@ export default function Code() {
         setspiner(false)
           // localStorage.setItem("UserToken",res.data.token)
         setUserLogin(res.data.token)
-        Navigat('/newPassword')
+        Navigat('/ecommerce/newPassword')
 
       // if (res.data.message == 'success') {
       //   localStorage.setItem("UserToken",res.data.token)

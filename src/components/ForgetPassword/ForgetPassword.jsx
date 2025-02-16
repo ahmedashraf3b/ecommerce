@@ -18,7 +18,7 @@ export default function ForgetPassword() {
       .post("https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords", params)
       .then((res)=>{
         setspiner(false)
-        Navigat('/Code')
+        Navigat('/ecommerce/Code')
 
       if (res.data.message == 'success') {
         localStorage.setItem("UserToken",res.data.token)
@@ -83,8 +83,8 @@ export default function ForgetPassword() {
         </div>
         
         <div className="flex gap-4 flex-col items-start ">
-        <Link to={'/login'}><span className="text-blue-500 underline">Login</span></Link>
-        <Link to={"/register"}><span className="text-blue-500 underline">Don't you have account ? Register Now</span></Link>
+        <Link to={'/ecommerce/login'}><span className="text-blue-500 underline">Login</span></Link>
+        <Link to={"/ecommerce/register"}><span className="text-blue-500 underline">Don't you have account ? Register Now</span></Link>
         <button
           type="submit"
           className="text-white  bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
