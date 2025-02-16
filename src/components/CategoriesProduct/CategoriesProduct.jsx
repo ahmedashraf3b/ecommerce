@@ -31,8 +31,14 @@ export default function CategoriesProduct() {
     }
   }
   let { addProductWishlist} = useContext(WishlistContext);
+  const [active, setactive] = useState()
   async function CallAddProductToWishlist(id){
     let x = await addProductWishlist(id)
+    if (active == id) {
+      setactive(null)
+    }else{
+      setactive(id)
+    }
       toast.success("success");
   }
   return (
@@ -76,7 +82,7 @@ export default function CategoriesProduct() {
                           Add to Cart
                         </button>
                       </div>
-                      <i onClick={()=>CallAddProductToWishlist(res.id)}  class="fa-regular  fa-heart text-3xl absolute top-3 right-3 text-red-600 "></i>
+                      <i onClick={()=>CallAddProductToWishlist(res.id)}  class={active == res.id? "fa-solid  fa-heart text-3xl absolute top-3 right-3 text-red-600 ":"fa-regular  fa-heart text-3xl absolute top-3 right-3 text-red-600 "}></i>
                     </div>
                   </>
                 ))}

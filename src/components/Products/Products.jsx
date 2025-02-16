@@ -30,10 +30,16 @@ export default function Products() {
       }
     }
     let { addProductWishlist} = useContext(WishlistContext);
-  async function CallAddProductToWishlist(id){
-    let x = await addProductWishlist(id)
-      toast.success("success");
-  }
+    const [active, setactive] = useState()
+    async function CallAddProductToWishlist(id){
+      let x = await addProductWishlist(id)
+      if (active == id) {
+        setactive(null)
+      }else{
+        setactive(id)
+      }
+        toast.success("success");
+    }
   return (
     <>
       <h1 className="text-left ms-2 mb-0 text-3xl font">
@@ -67,7 +73,7 @@ export default function Products() {
                   Add to Cart
                 </button>
               </div>
-              <i onClick={()=>CallAddProductToWishlist(product.id)}  class="fa-regular  fa-heart text-3xl absolute top-3 right-3 text-red-600 "></i>
+              <i onClick={()=>CallAddProductToWishlist(product.id)}  class={active == product.id? "fa-solid  fa-heart text-3xl absolute top-3 right-3 text-red-600 ":"fa-regular  fa-heart text-3xl absolute top-3 right-3 text-red-600 "}></i>
             </div>
           ))
         ) : (
